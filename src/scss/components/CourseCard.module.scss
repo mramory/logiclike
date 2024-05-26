@@ -1,0 +1,22 @@
+.container{
+    height: 100%;
+    border-radius: 18px;
+    box-shadow: 0px 10px 13px -4px #23235F30;
+    
+    div{
+        border-radius: 18px;
+        height: 162px;
+        background-color: #FF9966;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 144px;
+            height: 144px;
+        }
+    }
+    p{
+        padding: 12px 18px 18px;
+    }
+}
