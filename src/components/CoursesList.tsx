@@ -11,11 +11,10 @@ interface CoursesListProps {
 }
 
 export const CoursesList = ({courses}: CoursesListProps) => {
-    const ref = useIfHasScrollbar()
-    const scrollRef = useRestoreScroll()
-
+    const hasScrollbarRef = useIfHasScrollbar()
+    const restoreScrollRef = useRestoreScroll()
     return(
-        <ul ref={mergeRefs(ref, scrollRef)} className={s.container}>
+        <ul ref={mergeRefs(hasScrollbarRef, restoreScrollRef)} className={s.container}>
             {courses.map((course) => (
                 <li key={course.id}>
                     <CourseCard course={course} />

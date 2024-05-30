@@ -6,7 +6,6 @@ export const useRestoreScroll = () => {
     const ref = useRef<HTMLUListElement>(null)
     useEffect(() => {
         if(ref.current){
-            console.log("scroll")
             ref.current.scrollTo({top: 0, behavior: "smooth"})
         }
     }, [ref, search])

@@ -3,5 +3,5 @@ export type CourseType = {
     id: string,
     image: string,
     bgColor: string,
-    tags: Array<String>
+    tags: Array<string>
 }

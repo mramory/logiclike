@@ -2,14 +2,15 @@ import s from "@/scss/components/Sidebar.module.scss"
 import { Link } from "@tanstack/react-router"
 import { memo } from "react"
 
-export const Sidebar = memo(() => {
+interface SidebarProps {
+    tags: Set<string>
+}
+
+export const Sidebar = memo(({tags}: SidebarProps) => {
     return(
         <aside className={s.container}>
             <SidebarItem value="Все темы" />
-            <SidebarItem value="Логика и мышление" />
-            <SidebarItem value="Загадки" />
-            <SidebarItem value="Головоломки" />
-            <SidebarItem value="Путешествия" />
+            {Array.from(tags).map(tag => <SidebarItem key={tag} value={tag} />)}
         </aside>
     )
 })

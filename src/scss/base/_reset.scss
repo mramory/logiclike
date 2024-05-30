@@ -77,14 +77,27 @@ main {
   display: block;
 }
 
+html{
+  height: 100%;
+}
+
 body {
   line-height: 1;
   min-height: 100vh;
-  padding: 24px;
+  height: 100%;
+  padding: 24px 24px 11px 24px;
 
   &.with_scrollbar{
-    padding-right: 14px;
+    padding-right: 4px;
   }
+
+  &.with_scrollbar ul{
+    padding-right: 10px;
+  }
+}
+
+#root{
+  height: 100%;
 }
 
 ol,
